@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+  data:
+    redis:
+      port: 6379
+      host: localhost
+
+jwt:
+  secret: 7c051ac59033514c9e7e88cab8166ba801e8927d7ed9c25e452c6d9e1300020e83bdc52d54b4f8132b759e62b8eec85538cdb8f142c3abc73e0b819e5ed36f6f6dbddad10b59873986d2469cce13d7418e61ce09157be030247eab4f2324d4354823113a0b32352773576197cffb2c20b8ce985fcc9d36bef583b985d8a2d2bb4f7af9e5c330cec5c69a704bc876281fd1acfbd8d7db1630555bf12f0facffa1a08bc8e6cb20b93df4c37c656274aa1a8e46b1dcb8ffc810c3a4bf62e01bc1b4c6afa3b84fe124a34d9817c8f2eee7b6bc946f34acade0aa7b7c16b18380c06e3a7ad14d7c6110203c58ec663e428619459c4fa3d5537ad83d3831854872e54a
+  expiration: 86400000

@@ -1,0 +1,6 @@
+DROP TABLE user_roles;
+DROP TABLE comment;
+DROP TABLE task;
+DROP TABLE users;
+
+DELETE FROM databasechangelog;
